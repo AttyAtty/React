@@ -1,4 +1,5 @@
 // POINT 非同期処理（Promise）
+// プログラムが書いた順番に上から実行されないことを非同期処理という
 let a = 0;
 
 new Promise((resolve, reject) => {
