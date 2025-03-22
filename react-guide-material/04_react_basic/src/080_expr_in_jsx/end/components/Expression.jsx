@@ -9,7 +9,7 @@ const Expression = () => {
   const arry = ["item1", "item2", "item3"];
   const hello = (arg) => `${arg} Function`;
   const jsx = <h3>Hello JSX</h3>;
-  
+  // const bool = true;  のようなブーリアンは return {bool} しても何も返ってこない．そういう仕様．
   console.log(jsx);
 
   return (

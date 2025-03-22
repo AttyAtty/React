@@ -1,0 +1,7 @@
+.compoment {
+    color: blue;
+    border: solid;
+    padding: 1em;
+    border-width: 5px;
+    /* borderで一気にsolid blue 5px を指定できる */
+}
