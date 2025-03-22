@@ -12,12 +12,16 @@
       const appEl = document.querySelector("#app");
       const root = ReactDOM.createRoot(appEl);
 
+      // 関数コンポーネントと呼んでいる．
       // function Example() {
       //     return <h1>Hello Components</h1>;
       // }
 
-      // POINT コンポーネントの先頭は大文字とする
-      // POINT JSXが複数行の時は()で括る
+      // POINT コンポーネントの先頭は大文字とする.それが目印．小文字だと，htmlのタグだと思ってしまう．
+      // POINT JSXが複数行の時は()で括る.returnする値はreturn と同じ行の中で完結させなければいけないが，それだと見にくくなってしまう．return するグループがどこまでなのかがわかるように()でくくる
+      // ()はただのグループ化
+
+      // アロー関数でも書ける
       const Example = () => (
         <div>
           <h1>Hello Components</h1>

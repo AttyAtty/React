@@ -4,22 +4,13 @@
     <script src="../../../../libs/react.development.js"></script>
     <script src="../../../../libs/react-dom.development.js"></script>
     <script src="../../../../libs/babel-standalone.js"></script>
-    <!-- 三つめはReactで用いるJSXというHTMLに似た言語をJavaScriptに変換するソフトウェア -->
   </head>
   <body>
     <div id="app"></div>
-    <!--scriptの中にReactのコードを書いている．  -->
     <script type="text/babel">
-      // typeでbabelを渡したことでJSXがJに変換されている
-      // POINT ReactをHTMLにマウントする書き方
       const appEl = document.querySelector("#app");
       const root = ReactDOM.createRoot(appEl);
-      // createRootはAPI
       root.render(<h1>こんにちは</h1>);
-      // JSXでは上のようにhtmlの要素，構文をそのまま引数だったり変数として扱える．直感的？
-
-      // POINT React18以前の書き方
-      // ReactDOM.render(<h1>こんにちは</h1>, appEl)
     </script>
   </body>
 </html>

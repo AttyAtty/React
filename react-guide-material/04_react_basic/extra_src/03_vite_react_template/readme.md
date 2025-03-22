@@ -7,5 +7,11 @@
 
 ```bash
 npm create vite@latest my-react-app -- --template react
-npm create vite@latest my-react-app -- --template react-swc
+# 上の文はReactのプロジェクトのテンプレートを作るコマンド的なもの
+npm create vite@latest my-react-app-swc -- --template react-swc
+
+#実際にReactプロジェクトを実行するときは以下のコマンドを打つ．
+npm run dev
 ```
+
+
