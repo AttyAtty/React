@@ -16,7 +16,9 @@ const Example = () => {
         age={profile[0].age}
         country={profile[0].country}
       />
+      
       <Profile {...profile[1]} />
+
       <Profile />
     </div>
   );

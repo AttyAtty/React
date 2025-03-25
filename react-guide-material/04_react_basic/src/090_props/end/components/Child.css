@@ -4,6 +4,7 @@
   border: 5px solid blue;
 }
 
+/* propsとして渡す属性ごとに書いている大差ない． */
 .App-end .component.red {
   color: red;
   border: 5px solid red;
