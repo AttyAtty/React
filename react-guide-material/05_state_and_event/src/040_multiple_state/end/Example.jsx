@@ -11,7 +11,9 @@ const Example = () => {
   const [countB, setCountB] = useState(10);
   const [countC, setCountC] = useState(100);
 
-  /* POINT stateが呼ばれる順番は常に一定とする!
+  /* POINT stateが呼ばれる順番は常に一定とする!if文とかを使って実行されない時があってもダメ
+  コンソールをみればわかるが，_ownerのmemorizedStateの中で,ツリー構造(これがFiberTree)のようにnextに次のuseStateの値とかが
+  保持されている．なので順番が大事．(一番最後に呼ばれたやつ以外で)一つでも欠けると0番目の変数名と一意しなかったり実行する関数が違かったりでエラーが起こる．
   */
   
   return (

@@ -11,6 +11,7 @@ const Example = () => {
     setCount(prevstate /* 現在のstateの値 */ => {
       return prevstate + 1; /* 次のstateの値 */
     } );
+    // 上の書き方は結構頻出．複数書く時は関数で定義する．prevstateにcount + 1 が入る
     console.log(count);
   };
   const countDown = () => {

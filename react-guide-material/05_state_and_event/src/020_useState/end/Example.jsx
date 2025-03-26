@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 const Example = () => {
-  // POINT useStateは[ 値、変更用の関数 ]を返す
+  // POINT useStateは[ 参照用の値、変更，更新用の関数 ]を返す
+  // この関数知らなきゃむり
   // let valArry = useState();
-  // POINT 分割代入で取得
+  // POINT 分割代入で取得(どこで使われた？)
   let [val, setVal] = useState();
 
   return (
