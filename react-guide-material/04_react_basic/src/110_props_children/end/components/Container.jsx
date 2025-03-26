@@ -8,6 +8,7 @@ const Container = ({ title, children, first, second, color }) => {
     <div className={`container ${color}`}>
       <h3>{title}</h3>
       <div>{children}</div>
+      {/* コンポーネントが親クラスから配列として渡ってくる */}
       <div>{first}</div>
       <div>{second}</div>
     </div>
