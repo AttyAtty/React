@@ -5,6 +5,7 @@ const Example = () => {
   const [order, setOrder] = useState(orderObj);
   const changeItem = (e) => {
     // POINT オブジェクトを複製して新しいオブジェクトを生成
+    // オブジェクトの周りに()があるのは{}がオブジェクトリテラルなのかアロー関数のものなのかを識別するため
     setOrder(order => ({ ...order, item: e.target.value }));
   };
   const countUp = () => {

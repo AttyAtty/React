@@ -4,6 +4,8 @@ import { useState } from "react";
 // コンポーネントが消滅する可能性がある時。
 // 特定のstateを複数の子コンポーネントで共有したいとき。
 
+// コンポーネントを呼ぶたびにstateを初期化したい場合はコンポーネントの中でuseStateを定義する．
+// ずっとstateの値やデータを維持したい場合は親コンポーネント(関数)で定義する．
 const Example = () => {
   const [toggle, setToggle] = useState(true);
   const [countA, setCountA] = useState(0);
