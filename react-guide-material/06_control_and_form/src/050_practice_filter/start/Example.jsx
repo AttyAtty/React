@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Profile from "./components/Profile";
 
 const persons = [
@@ -19,12 +20,21 @@ const persons = [
 ];
 
 const Example = () => {
+  const [filterName, setFilterName] = useState("");
+
   return (
     <>
       <h3>練習問題</h3>
       <p>入力欄を設置して、入力値と名前が一致したもののみ表示する仕組みを作成してください。</p>
+      <input type="text" value={filterName} onChange={(e) => setFilterName(e.target.value)}/>
       <ul>
-        {persons.map((person) => (
+        {persons
+        .filter(person =>
+          {
+            const isMatch = person.name.indexOf(filterName) !== -1;
+            return isMatch;
+          })
+        .map((person) => (
           <li key={person.name}>
             <Profile {...person} />
           </li>

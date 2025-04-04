@@ -15,7 +15,7 @@ const Example = () => {
       <ul>
         {/*{animalList}  {helloAnimals} */}
         {
-          /* POINT 子要素にKeyキーを設定 */
+          /* POINT 配列など繰り返し操作を行うものに対しては子要素に一意なKeyキーを設定 */
           animals.map((animal) => (
             <li key={animal}>Hello, {animal}</li>
           ))

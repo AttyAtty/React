@@ -1,5 +1,5 @@
-import Profile from "./components/Profile";
 import { useState } from "react";
+import Profile from "./components/Profile";
 
 const persons = [
   {
@@ -23,6 +23,7 @@ const Example = () => {
   const [filterVal, setFilterVal] = useState("");
   return (
     <>
+      {/* inputタグ追加 */}
       <input type="text" value={filterVal} onChange={(e) => setFilterVal(e.target.value)} />
       <ul>
         {persons
