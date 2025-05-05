@@ -9,7 +9,9 @@ const Example = () => {
     { label: "Banana", value: 200, checked: false },
     { label: "Cherry", value: 300, checked: false },
   ]);
+  // いじるのはcheckedだけ．初期設定長い
 
+  // 合計値を出しその値を保存しておくためのstate
   const [sum, setSum] = useState(0);
 
   const handleChange = (e) => {
@@ -17,11 +19,13 @@ const Example = () => {
       const newFruit = { ...fruit };
       if (newFruit.label === e.target.value) {
         newFruit.checked = !fruit.checked;
+        // trueとfalseを逆にする処理
       }
 
       return newFruit;
     });
 
+    // 再レンダリングしてる
     setFruits(newFruits);
     // forEachバージョン
     // let sumVal = 0;
@@ -35,12 +39,16 @@ const Example = () => {
     // let sumVal = 0;
     // newFruits
     //   .filter((fruit) => fruit.checked)
+    // チェックされているものを配列として取得する
     //   .forEach((fruit) => (sumVal = sumVal + fruit.value));
+    // 合計値を算出
 
     // filter + reduceバージョン
     let sumVal = newFruits
       .filter((fruit) => fruit.checked)
+      // チェックされているものを配列として取得する
       .reduce((sumVal, fruit) => sumVal + fruit.value, 0);
+      // 合計値を算出(初期値は第二引数)
     setSum(sumVal);
   };
   return (
@@ -54,6 +62,7 @@ const Example = () => {
               type="checkbox"
               value={fruit.label}
               checked={fruit.checked}
+              // チェックボックスの表示の更新
               onChange={handleChange}
             />
             {/* 接続詞追加 */}

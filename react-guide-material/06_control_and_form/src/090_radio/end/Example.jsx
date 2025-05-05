@@ -12,10 +12,13 @@ const Example = () => {
       {RADIO_COLLECTION.map((value) => {
         return (
           <label key={value}>
+            {/* keyも忘れずに */}
             <input
               type="radio"
+              // ラジオボタンにしている
               value={value}
               checked={fruit === value}
+              // trueを返すvalue(AppleかBananaかCherry)にボタンを変える
               onChange={onChange}
             />
             {value}

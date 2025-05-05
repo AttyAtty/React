@@ -1,9 +1,10 @@
-// POINT コンポーネントのリファクタリング
+// POINT コンポーネントのリファクタリング(分割代入)
+// filterメソッドは親のExample関数に書くとよい
 
 import { useState } from "react";
 
-import AnimalList from "./components/AnimalList"
-import AnimalFilter from "./components/AnimalFilter"
+import AnimalFilter from "./components/AnimalFilter";
+import AnimalList from "./components/AnimalList";
 
 const Example = () => {
   const animals = ["Dog", "Cat", "Rat"];
