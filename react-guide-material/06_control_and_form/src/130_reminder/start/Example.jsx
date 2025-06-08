@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import Todo from "./components/Todo";
 
 const Example = () => {
   const [todo,  setTodo] = useState();
@@ -8,17 +8,7 @@ const Example = () => {
   return (
     <>
       <h2>Reminder</h2>
-      {todoList.map((todo) => (
-        <button>完了</button>
-        <p>{todo}</p>
-      ))}
-
-      <br />
-      <input
-        type="text"
-        //onClick={(e) = }
-      />
-      <button>追加</button>
+      <Todo />
     </>
   );
 };
